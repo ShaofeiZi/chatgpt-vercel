@@ -49,7 +49,8 @@ const timeout = isNaN(+process.env.TIMEOUT!)
   : +process.env.TIMEOUT!
 
 const passwordSet = process.env.PASSWORD || defaultEnv.PASSWORD
-
+console.log("localKey", localKey)
+console.log("passwordSet", passwordSet)
 export async function POST({ request }: APIEvent) {
   try {
     const body: {
